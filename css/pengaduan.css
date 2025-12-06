@@ -1,0 +1,162 @@
+
+        /* Modern Dark Theme - Red Accent */
+        body { 
+            background-color: #050505; 
+            color: #e0e0e0; 
+            font-family: 'Poppins', 'Segoe UI', sans-serif; 
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 0;
+        }
+
+        /* Card Container */
+        .glass-container { 
+            background: #111;
+            padding: 45px; 
+            border-radius: 12px; 
+            box-shadow: 0 20px 50px rgba(0,0,0,0.9); 
+            border: 1px solid #222;
+            width: 100%;
+            max-width: 850px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Aksen Garis Merah Bercahaya di Atas */
+        .glass-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, #ff0000, #ff4d4d);
+            box-shadow: 0 0 20px rgba(255, 0, 0, 0.6);
+        }
+
+        /* Judul */
+        h4.title-glow { 
+            color: #ff0000; 
+            font-weight: 700; 
+            letter-spacing: 2px;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+            text-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
+            border-bottom: 1px solid #333;
+            padding-bottom: 20px;
+        }
+        
+        h4.title-glow i {
+            color: #fff;
+            margin-right: 12px;
+            background-color: #ff0000;
+            padding: 10px;
+            border-radius: 50%;
+            font-size: 1rem;
+            width: 40px;
+            height: 40px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 0 10px rgba(255, 0, 0, 0.4);
+        }
+
+        /* Label */
+        .form-label { 
+            font-weight: 500; 
+            color: #bbb; 
+            font-size: 0.9rem;
+            margin-bottom: 8px;
+            display: block;
+        }
+        .form-label i {
+            color: #ff0000;
+            width: 20px;
+            text-align: center;
+            margin-right: 5px;
+        }
+
+        /* Input Fields */
+        .form-control { 
+            background-color: #1a1a1a; 
+            border: 1px solid #333; 
+            color: #fff; 
+            border-radius: 6px; 
+            padding: 12px 15px;
+            transition: all 0.3s ease;
+        }
+
+        .form-control:focus { 
+            background-color: #222; 
+            border-color: #ff0000; 
+            box-shadow: 0 0 10px rgba(255, 0, 0, 0.2); /* Glow effect merah */
+            color: #fff;
+        }
+
+        .form-control::placeholder {
+            color: #555;
+            font-style: italic;
+        }
+
+        .form-control[readonly] {
+            background-color: #0f0f0f;
+            color: #777;
+            cursor: not-allowed;
+            border-color: #222;
+        }
+
+        /* File Upload Styling */
+        input[type="file"]::file-selector-button {
+            background-color: #222;
+            color: #ff0000;
+            border: 1px solid #333;
+            padding: 8px 15px;
+            margin-right: 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: 0.3s;
+            font-weight: 600;
+        }
+        input[type="file"]::file-selector-button:hover {
+            background-color: #ff0000;
+            color: white;
+            border-color: #ff0000;
+        }
+
+        /* Buttons */
+        .btn {
+            padding: 12px 35px;
+            font-weight: 600;
+            border-radius: 6px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+        }
+
+        .btn-primary { 
+            background: #ff0000;
+            border: none; 
+            color: #fff;
+            box-shadow: 0 4px 15px rgba(255, 0, 0, 0.25);
+        }
+
+        .btn-primary:hover { 
+            background: #cc0000;
+            box-shadow: 0 6px 20px rgba(255, 0, 0, 0.5);
+            transform: translateY(-2px);
+        }
+
+        .btn-danger {
+            background: transparent;
+            border: 1px solid #444;
+            color: #888;
+        }
+        
+        .btn-danger:hover {
+            background: #333;
+            color: #fff;
+            border-color: #fff;
+        }

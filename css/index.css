@@ -1,0 +1,198 @@
+    /* Global Style */
+    body {
+        background-color: #000; /* Latar belakang hitam untuk keseluruhan halaman */
+        color: #fff; /* Warna teks putih agar kontras dengan latar belakang */
+        font-family: 'Arial', sans-serif; /* Menggunakan font Arial */
+        overflow-x: hidden; /* Menyembunyikan scroll bar horizontal */
+    }
+
+    /* Navbar */
+    .navbar {
+        border: none; /* Menghilangkan border pada navbar */
+    }
+
+    .navbar-brand {
+        color: red; /* Mengatur warna teks brand navbar menjadi merah */
+        font-size: 35px; /* Ukuran font besar untuk nama brand */
+        font-weight: bold; /* Membuat teks brand menjadi tebal */
+        text-shadow: 0 0 15px #ff5c5c, 0 0 30px #ff5c5c, 0 0 45px #ff5c5c; /* Efek glow pada teks */
+        animation: glow 1s infinite alternate; /* Animasi glow yang berulang */
+    }
+
+    .nav-link {
+        color: white ; /* Warna teks pada link navbar menjadi putih */
+        font-weight: bold; /* Teks link navbar menjadi tebal */
+        transition: color 0.3s, text-shadow 0.3s; /* Transisi warna dan efek glow saat hover */
+    }
+
+    .nav-link:hover {
+        color: red; /* Warna teks menjadi merah saat hover */
+        text-shadow: 0 0 15px #ff5c5c, 0 0 30px #ff5c5c, 0 0 45px #ff5c5c; /* Glow saat hover */
+    }
+
+    /* Tombol kotak merah (Login / Daftar) */
+    .btn-box-red {
+        background: transparent;
+        color: #fff;
+        border: 2px solid red;
+        border-radius: 8px;
+        padding: 6px 14px;
+        font-weight: 700;
+        text-decoration: none;
+        transition: background-color 0.2s, color 0.2s, transform 0.15s, box-shadow 0.2s;
+    }
+    .btn-box-red:hover {
+        background: red;
+        color: #fff;
+        box-shadow: 0 6px 18px rgba(255, 92, 92, 0.45);
+        transform: translateY(-2px);
+    }
+
+    /* Text Glow Animation */
+    @keyframes glow {
+        from {
+            text-shadow: 0 0 15px #ff5c5c, 0 0 30px #ff5c5c, 0 0 45px #ff5c5c;
+        }
+        to {
+            text-shadow: 0 0 25px #ff5c5c, 0 0 50px #ff5c5c, 0 0 75px #ff5c5c; /* Glow semakin besar */
+        }
+    }
+
+    h2 {
+        text-shadow: yellow; /* Glow pada judul h2 */
+        animation: glow 1s infinite alternate; /* Animasi glow pada h2 */
+    }
+
+    /* Section Styling */
+    .section {
+        padding: 60px 0; /* Padding atas dan bawah 60px untuk section */
+        transition: background-color 0.5s; /* Transisi perubahan warna latar belakang */
+    }
+
+    /* Team Card */
+    .team-card {
+        background-color: rgba(255, 255, 255, 0.1); /* Latar belakang transparan dengan efek sedikit putih */
+        border: none; /* Menghilangkan border pada card */
+        border-radius: 20px; /* Sudut card dibulatkan */
+        transition: transform 0.3s, box-shadow 0.3s; /* Transisi transformasi dan box-shadow saat hover */
+        margin-bottom: 30px; /* Jarak antar baris kartu */
+        overflow: hidden; /* Agar gambar tidak keluar dari radius */
+        height: 100%; /* Memastikan tinggi kartu rata jika di grid */
+    }
+
+    .team-card h5 {
+        font-size: 19px; /* Ukuran font sedikit diperbesar */
+        font-weight: bold; /* Membuat teks judul tebal */
+        margin-top: 10px;
+    }
+
+    .team-card:hover {
+        transform: scale(1.03); /* Efek pembesaran sedikit saat hover */
+        box-shadow: 0 8px 40px rgba(255, 92, 92, 0.7); /* Glow lebih kuat saat hover */
+        z-index: 10;
+    }
+
+    .team-member {
+        margin-bottom: 30px; /* Memberi jarak bawah antara anggota tim */
+        opacity: 0; /* Memulai dengan opacity 0 agar animasi fade in terlihat */
+        animation: fadeInUp 0.5s forwards; /* Animasi fade-in dari bawah */
+    }
+
+    /* Animasi delay untuk setiap anggota tim */
+    .team-member:nth-child(1) { animation-delay: 0.1s; }
+    .team-member:nth-child(2) { animation-delay: 0.2s; }
+    .team-member:nth-child(3) { animation-delay: 0.3s; }
+    .team-member:nth-child(4) { animation-delay: 0.4s; }
+    .team-member:nth-child(5) { animation-delay: 0.5s; }
+    .team-member:nth-child(6) { animation-delay: 0.6s; }
+
+    @keyframes fadeInUp {
+        from {
+            transform: translateY(20px); /* Memulai dengan pergeseran 20px ke bawah */
+            opacity: 0; /* Opacity 0 saat animasi dimulai */
+        }
+        to {
+            transform: translateY(0); /* Berhenti pada posisi semula */
+            opacity: 1; /* Opacity penuh */
+        }
+    }
+
+    /* Button Styling */
+    .btn-red {
+        background-color: red; /* Warna latar belakang tombol merah */
+        border: none; /* Menghilangkan border pada tombol */
+        border-radius: 50px; /* Membuat tombol bulat dengan sudut melengkung */
+        padding: 10px 20px; /* Padding tombol */
+        transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s; /* Efek transisi saat hover */
+    }
+
+    .btn-red:hover {
+        background-color: darkred; /* Mengubah warna tombol menjadi merah tua saat hover */
+        transform: scale(1.05); /* Efek pembesaran saat hover */
+        box-shadow: 0 0 20px red, 0 0 30px darkred; /* Glow saat hover */
+    }
+
+    .card-title {
+        text-decoration: none; /* Menghilangkan dekorasi underline pada judul card */
+        color: white !important;
+    }
+
+    .card-title:hover {
+        text-decoration: underline; /* Menambahkan underline saat hover */
+    }
+
+    /* Image Container and Animation */
+    .image-container {
+        display: flex; /* Menata gambar secara fleksibel */
+        justify-content: center; /* Menyelaraskan gambar ke tengah */
+        overflow: hidden; /* Menyembunyikan bagian gambar yang melebihi batas */
+        position: relative; /* Menjadikan posisi relatif untuk animasi */
+        animation: slide 4s ease-in-out infinite alternate; /* Animasi slide gambar */
+    }
+
+    .image-container img {
+        border-radius: 15px; /* Membulatkan sudut gambar */
+        transition: transform 0.3s; /* Transisi efek pembesaran saat hover */
+        box-shadow: none; /* Menghapus efek glow pada gambar */
+    }
+
+    /* About Image */
+    .about-image {
+        border-radius: 10px; /* Membulatkan sudut gambar */
+        box-shadow: 0 4px 20px rgba(255, 92, 92, 0.5); /* Efek glow pada gambar */
+        transition: transform 0.3s, box-shadow 0.3s; /* Transisi transformasi dan box-shadow saat hover */
+    }
+    
+    /* Footer */
+    .footer {
+        background-color: #111; /* Latar belakang footer gelap */
+        padding: 10px 0; /* Padding atas dan bawah pada footer */
+        text-shadow: 0 0 15px #ff5c5c, 0 0 30px #ff5c5c, 0 0 45px #ff5c5c; /* Glow tambahan pada teks footer */
+    }
+
+    .btn-social {
+        background: transparent; /* Latar belakang tombol sosial transparan */
+        border: none; /* Menghilangkan border pada tombol */
+        color: #fff; /* Warna teks putih pada tombol sosial */
+        transition: color 0.3s, text-shadow 0.3s; /* Transisi warna dan efek glow saat hover */
+        padding: 0 5px;
+    }
+
+    .btn-social:hover {
+        color: #ff5c5c; /* Warna teks merah muda saat hover */
+        text-shadow: 0 0 20px #ff5c5c, 0 0 30px #ff5c5c; /* Glow saat hover */
+    }
+    
+    /* Styles Khusus untuk Foto Anggota Tim (Persegi Panjang Besar) */
+    .card-img-top {
+        width: 100%; /* Memenuhi lebar kartu */
+        height: 350px; /* Tinggi diperbesar agar kartu terlihat panjang ke bawah */
+        object-fit: cover; /* Agar gambar tidak gepeng, akan terpotong rapi */
+        margin: 0; /* Menghilangkan margin bawaan */
+        background-color: #333;
+        /* Radius hanya di atas agar menyatu dengan kartu */
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
